@@ -8,25 +8,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Barra de navegación fija */
-        nav {
+        .navbar-fixed {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 999; /* Siempre encima del contenido */
-            background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
-            backdrop-filter: blur(10px); /* Efecto de desenfoque */
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95); /* Fondo semitransparente */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Desenfoque opcional */
         }
 
-        /* Espaciado para compensar la barra fija */
+        /* Ajuste para evitar que el contenido quede oculto */
         body {
-            padding-top: 4rem; /* Ajustar según la altura de la barra de navegación */
+            padding-top: 4rem; /* Altura de la barra de navegación */
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navbar -->
-    <nav class="shadow-md">
+    <nav class="navbar-fixed shadow-md">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -44,7 +45,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="inicio" class="pt-28 pb-12 bg-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
